@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Dental Bonding",
+        "price": "$1000",
+        "description": "Dental bonding is a technique used to correct imperfections with your teeth to give you a better-looking smile. Bonding is used to repair chipped teeth, decayed teeth, and cracked teeth. Bonding involves applying a tooth-colored resin material to the teeth and hardening it with a light. This bonds the material to the teeth to improve a person's smile. ",
+        "img": "./images/1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Dental Crowns",
+        "price": "$500",
+        "description": "A dental crown is a dental prosthesis which replaces the visible part of a tooth. A dental crown functions to strengthen teeth, restore their original shape, and improve their appearance. Dental crowns are also used to hold dental bridges in place and cover dental implants.",
+        "img": "./images/2.jpg"
+    },
+    {
+        "id": 3,
+        "name": " Cosmetic Fillings",
+        "price": "$1500",
+        "description": "Cosmetic fillings, or tooth- colored fillings, are made of composite resin and glass particles. They are cemented onto the existing teeth using a bonding agent. Cosmetic fillings can improve the appearance of your smile. Unlike silver-colored fillings, cosmetic fillings look just like your natural teeth. ",
+        "img": "./images/3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Dentures",
+        "price": "$1800",
+        "description": "Have you lost most or all of your teeth? Dentures are removable appliances that can replace missing teeth. A complete denture is used when all of the patient's teeth are missing. A partial denture is used when only some of the teeth are missing.",
+        "img": "./images/Dentures.jpg"
+    },
+    {
+        "id": 5,
+        "name": " Invisalign",
+        "price": "$1200",
+        "description": "Invisalign is the best way to straighten your smile without interfering with your day-to-day life. Invisalign gradually moves your teeth using a series of custom-fitted. Invisalign aligners are nearly invisible and very comfortable to wear. ",
+        "img": "./images/invi.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Tooth Extractions",
+        "price": "$1500",
+        "description": "A tooth extraction, or dental extraction, is the removal of a tooth from its socket in the bone. There are a number of reasons why tooth removal may be necessary. An extraction may be necessary if your tooth is so damaged.",
+        "img": "./images/extrac.jpg"
+    }
+]
