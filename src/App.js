@@ -9,6 +9,7 @@ import RequireAuth from './Pages/RequirAuth/RequireAuth';
 import Register from './Pages/Register/Register';
 import About from './Pages/About/About';
 import Blog from './Pages/Blog/Blog';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
         }></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='login' element={<Login></Login>}> </Route>
-
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );

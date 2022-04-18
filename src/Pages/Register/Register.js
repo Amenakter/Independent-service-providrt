@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import SocialBtn from '../SocialBtn/SocialBtn';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../Shared/Loading/Loading';
 
 
 const Register = () => {
@@ -15,7 +16,7 @@ const Register = () => {
     const navigate = useNavigate()
     let userError;
     if (loading || updating) {
-        return <p>loading...</p>
+        return <Loading></Loading>
     }
     if (error || UpdateError) {
         userError = <p>{error?.message}</p>
