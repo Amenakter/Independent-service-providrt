@@ -6,6 +6,7 @@ import Home from './Pages/Home/Home/Home';
 import DentistryDetails from './Pages/DentistryDetails/DentistryDetails';
 import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/RequirAuth/RequireAuth';
+import Register from './Pages/Register/Register';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <DentistryDetails></DentistryDetails>
           </RequireAuth>
         }></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
         <Route path='login' element={<Login></Login>}> </Route>
 
       </Routes>

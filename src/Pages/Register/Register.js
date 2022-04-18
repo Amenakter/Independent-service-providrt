@@ -2,11 +2,16 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import SocialBtn from '../SocialBtn/SocialBtn';
 
-const Login = () => {
+const Register = () => {
     return (
         <div className='container mx-auto w-50 mt-5 '>
             <Form>
-                <h2>Please Login!!</h2>
+                <h2>Please Register!!</h2>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Your Name:</Form.Label>
+                    <Form.Control type="email" placeholder="Enter your name" />
+
+                </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" />
@@ -21,7 +26,7 @@ const Login = () => {
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
-                    Log In
+                    Register
                 </Button>
             </Form>
             <SocialBtn></SocialBtn>
@@ -29,4 +34,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
