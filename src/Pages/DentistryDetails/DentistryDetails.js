@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import DentistDetail from '../Home/DentistDetail/DentistDetail';
+import img from '../../images/Banner/images.jpg'
+
 
 const DentistryDetails = () => {
 
@@ -31,8 +32,14 @@ const DentistryDetails = () => {
                         Submit
                     </Button>
                 </Form>
-                <div >
-                    <DentistDetail></DentistDetail>
+                <div className='w-50 ms-5'>
+                    <img className='px-5 w-75' src={img} alt="" />
+                    <p className='text-center fw-bold'>
+                        A man without money is like a wolf without teeth. ~ French Proverb
+                    </p>
+                    <p className='text-center fw-bold'>
+                        If you had teeth of steel, you could eat iron coconuts.~ Senegalese Proverb
+                    </p>
 
                 </div>
             </div>
