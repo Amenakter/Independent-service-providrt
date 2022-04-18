@@ -1,0 +1,27 @@
+.aboutcontainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(201, 198, 198);
+    border-radius: 8px;
+    background-color: rgb(214, 220, 239);
+    padding: 50px 20px;
+    align-content: center;
+    flex-direction: row-reverse;
+}
+
+.imgs {
+    width: 200px;
+    height: 200px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.aboutcontainer p {
+    line-height: 40px;
+}
