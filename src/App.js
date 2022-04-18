@@ -10,6 +10,7 @@ import Register from './Pages/Register/Register';
 import About from './Pages/About/About';
 import Blog from './Pages/Blog/Blog';
 import NotFound from './Pages/NotFound/NotFound';
+import Footer from './Pages/Shared/Footer/Footer';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path='login' element={<Login></Login>}> </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
