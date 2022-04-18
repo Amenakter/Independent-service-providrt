@@ -9,8 +9,8 @@ const DentistDetail = () => {
             <hr className='mt-5' />
             <h3 className='text-center'>Doctor Info:</h3>
             <div style={{ height: '1px' }} className='d-block mx-auto w-50 bg-secondary'></div>
-            <div className='Dr-info container text-center d-flex flex-lg-row flex-sm-row  align-items-center align-items-md-center justify-content-md-between justify-content-between  mt-5'>
-                <div className='col-md-6'>
+            <div className='Dr-info container d-lg-flex align-items-center justify-content-center  mt-5'>
+                <div className='col-md-6 text-center'>
                     <img className='imgs' src={imgs} alt="" />
                     <h3>Profile Of Professional Dr. Nasir Uddin</h3>
                     <p>BDS, MS (OMS)</p>
@@ -19,7 +19,7 @@ const DentistDetail = () => {
                     <p>Dental ,oral & Maxillofacial Surgary Specialist</p>
                 </div>
 
-                <div className='col-md-6' >
+                <div className='col-md-6 mt-5 text-center' >
                     <p>Chambers:</p>
                     <h4>Avenue Dental Care</h4>
                     <p>House 3A , Satmosjid Road, Dhaka-11205, Bangladesh</p>
