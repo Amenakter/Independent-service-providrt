@@ -9,6 +9,7 @@ const DentistryDetails = () => {
     }
     return (
         <div>
+
             <div className='container mt-5 w-75 d-flex align-items-center justify-content-between'>
 
                 <Form className='w-50' onSubmit={handleSubmit}>

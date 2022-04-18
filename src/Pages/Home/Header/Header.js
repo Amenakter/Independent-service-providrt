@@ -25,7 +25,7 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="/login" className='fs-5 text-dark'>Register</Nav.Link>
+                            <Nav.Link as={Link} to="/register" className='fs-5 text-dark'>Register</Nav.Link>
                             {
                                 user ?
                                     <Nav.Link as={Link} to="/" onClick={handleSignOut} className='fs-5 text-dark'>
