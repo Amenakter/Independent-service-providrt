@@ -7,6 +7,8 @@ import DentistryDetails from './Pages/DentistryDetails/DentistryDetails';
 import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/RequirAuth/RequireAuth';
 import Register from './Pages/Register/Register';
+import About from './Pages/About/About';
+import Blog from './Pages/Blog/Blog';
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/blog' element={<Blog></Blog>} ></Route>
         <Route path='/service/:dentistryId' element={
           <RequireAuth>
             <DentistryDetails></DentistryDetails>
