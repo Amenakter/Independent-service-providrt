@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import img from '../../images/Banner/images.jpg'
+import DentistDetail from '../Home/DentistDetail/DentistDetail';
 
 const DentistryDetails = () => {
 
@@ -27,17 +27,13 @@ const DentistryDetails = () => {
                         <Form.Label>Mobile Number:</Form.Label>
                         <Form.Control type="number" />
                     </Form.Group>
-
-
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group>
                     <Button variant="primary" type="submit">
                         Submit
                     </Button>
                 </Form>
                 <div >
-                    <img className='w-100' src={img} alt="" />
+                    <DentistDetail></DentistDetail>
+
                 </div>
             </div>
         </div>
