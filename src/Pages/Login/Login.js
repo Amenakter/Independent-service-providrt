@@ -25,6 +25,7 @@ const Login = () => {
 
     if (user) {
         navigate(from, { replace: true })
+        console.log(user);
     }
 
 
@@ -33,7 +34,7 @@ const Login = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         signInWithEmailAndPassword(email, password)
-        console.log(user)
+
 
     }
     const goRegister = () => {
@@ -43,7 +44,7 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email)
-            toast(' reset Password email sent')
+            toast(' Reset Password Mail Eent')
         }
         else {
             toast('Email Address is Missing')

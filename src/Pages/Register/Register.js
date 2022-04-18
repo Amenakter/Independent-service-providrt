@@ -1,24 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import SocialBtn from '../SocialBtn/SocialBtn';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const Register = () => {
+    const [acceptTurms, setAcceptTurms] = useState(false)
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
     const navigate = useNavigate()
     let userError;
-    if (loading) {
+    if (loading || updating) {
         return <p>loading...</p>
     }
-    if (error) {
+    if (error || UpdateError) {
         userError = <p>{error?.message}</p>
     }
 
 
+    if (user) {
+        console.log(user);
+    }
 
     const goToLogin = () => {
         navigate('/login')
@@ -31,12 +37,13 @@ const Register = () => {
         const confirmPass = event.target.ConPassword.value;
         if (password === confirmPass) {
             await createUserWithEmailAndPassword(email, password)
+            await updateProfile({ displayName: name })
+            navigate("/home")
         }
         else {
             toast('Password not match')
         }
-        navigate("/home")
-        console.log(user);
+
     }
     return (
         <div className='container mx-auto w-50 mt-5 '>
@@ -61,10 +68,10 @@ const Register = () => {
                     <Form.Label> Confirm Password</Form.Label>
                     <Form.Control type="password" name='ConPassword' placeholder="Password" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
+                <Form.Group className="mb-3" controlId="formBasicCheckbox" >
+                    <Form.Check type="checkbox" onChange={() => setAcceptTurms(!acceptTurms)} label='Accept the turms and Conditions' />
                 </Form.Group>
-                <Button variant="primary" type="submit" className='w-50 d-block mx-auto'>
+                <Button disabled={!acceptTurms} variant="primary" type="submit" className='w-50 d-block mx-auto'>
                     Register
                 </Button>
                 {userError}
